@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3 class=" mt-3">Estados</h3>
+
+<button class="btn btn-primary mt-md-3 mb-3" data-toggle="modal" data-target="#modalCadastroEstado"><i class="fas fa-plus"></i> Novo Estado</button>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Sigla</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody id="lista-estados"></tbody>
+    <tfoot>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Sigla</th>
+            <th>Ação</th>
+        </tr>
+    </tfoot>
+</table>
+<div class="modal fade" id="modalCadastroEstado" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModallabel" aria-hidden="true">
+    <div class="modal-dialog modal-x1" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"
+                    id="exampleModallabel">
+                    Cadastro de Estado
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form id="form">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="campo-nome">Nome</label>
+                                <input type="text" id="campo-nome" class="form-control" autocomplete="off" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="campo-sigla">Sigla</label>
+                                <input type="text" id="campo-sigla" class="form-control" autocomplete="off" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success"
+                                id="estado-botao-salvar">
+                            <i class="fas fa-save"></i> Salvar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Scripts/Estado/Cadastro.js"></script>
+
+
